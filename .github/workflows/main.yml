@@ -1,0 +1,17 @@
+
+name: ci_testing
+
+on:
+  push:
+    branches:
+      - ci_testing   # Your branch name here
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Print message
+        run: echo "CI is working!"
